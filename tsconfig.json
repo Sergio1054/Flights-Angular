@@ -22,7 +22,24 @@
     "lib": [
       "ES2022",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@models/*": [
+        "src/app/shared/models/*"
+      ],
+      "@contracts/*": [
+        "src/app/shared/contracts/*"
+      ],
+      "@services/*": [
+        "src/app/shared/services/*"
+      ],
+      "@flight/*": [
+        "src/app/components/flight/*"
+      ],
+      "@environments/*": [
+        "src/environments/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

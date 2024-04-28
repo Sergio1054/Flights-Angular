@@ -1,0 +1,41 @@
+<div class="row justify-content-center">
+  <div class="row mb-3">
+    <div class="col-12">
+      <h5 class="text-center">DCX - Result</h5>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12" *ngIf="journeys.length === 0">
+      No se han obtenido resultados para la busqueda realizada
+    </div>
+    <div class="col-12 mb-2" *ngFor="let journey of journeys">
+      <div class="card">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-6 text-center">
+              <div>
+                {{journey.completeName}}
+              </div>
+              <div>
+                {{journey.price}}
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="row justify-content-center">
+                <div class="flight border rounded-3 text-center mb-2" *ngFor="let flight of journey.flights">
+                  <div class="text-center">
+                    {{flight.completeName}}
+                  </div>
+                  <div class="text-end px-2">
+                    {{flight.transport.completeName}}}
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
